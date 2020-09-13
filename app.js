@@ -1,5 +1,6 @@
 let gender, active, goal
 let diets = new Array();
+let api_call = 'https://api.edamam.com/search?q=chicken&app_id=$f49d55d1&app_key=$f4a318b1872a680a0893cdabff670d7d';
 
 document.getElementById('submit').onclick = function() {
     let gender_options = document.getElementsByName('gender');
@@ -36,9 +37,18 @@ document.getElementById('submit').onclick = function() {
             diets.push(v.id);
         }
     }
-    for (p of pescatarian) {
+    for (let p of pescatarian) {
         if (p.checked) {
             diets.push(p.id);
         }
     }
+    for (let diet of diets) {
+        api_call = api_call + '&health=' + diet;
+    }
+    const response = fetch(api_call, {mode: "no-cors"});
+    response
+        .then(data => data.json())
+        .then(data => {
+            console.log(data);
+        })
 }
