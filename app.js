@@ -45,7 +45,7 @@ document.getElementById('submit').onclick = function() {
     for (let diet of diets) {
         api_call = api_call + '&health=' + diet;
     }
-    const response = fetch(api_call, {mode: "no-cors"});
+    const response = fetch(api_call);
     response
         .then(data => data.json())
         .then(data => {
