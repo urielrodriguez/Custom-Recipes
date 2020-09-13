@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(#D3CCE3,#E9E4F0);
+    height: 100%;
+}
+
+.site-title {
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    padding-top: 50px;
+    padding-bottom: 25px;
+}
+
+.questionnaire {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Roboto', sans-serif;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 50px;
+}
+
+.card {
+    padding: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    padding-bottom: 10px;
+}
+
+.gender {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.female {
+    margin-left: 10px;
+}
+
+#h, #w {
+    width: 7%;
+    margin-left: 5px;
+    border-left: white;
+    border-top: white;
+    border-right: white;
+    border-width: thin;
+    outline: none;
+    padding-top: 5px;
+}
+
+.how-active-are-you div,
+.what-is-your-goal div,
+.are-you-following-a-specific-diet div {
+    margin-bottom: 5px;
+}

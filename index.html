@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Custom Recipes</title>
+        <link rel="stylesheet" type="text/css" href="style.css"> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;1,500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+    <body>
+        <header>
+            <h1 class="site-title">Welcome to Custome Recipes!</h1>
+        </header>
+        <section class="questionnaire">
+
+            <div class="card tell-us-about-yourself" style="width: 35rem;">
+                <h3 class=""><strong>Tell Us About Yourself</strong></h3>
+                <div class="gender">
+                    <div class="custom-control custom-radio male">
+                        <input type="radio" class="custom-control-input" name="gender" id="male">
+                        <label for="male" class="custom-control-label">Male</label>
+                    </div>
+                    <div class="custom-control custom-radio female">
+                        <input type="radio" class="custom-control-input" name="gender" id="female">
+                        <label for="female" class="custom-control-label">Female</label>
+                    </div>
+                </div>
+                <div class="height">
+                    <label for="height" class="">Height</label>
+                    <input type="text" name="height-feet" id="h">
+                    ft
+                    <input type="text" name="height-inches" id="h">
+                    in
+                </div>
+                <div class="weight">
+                    <label for="weight" class="">Weight</label>
+                    <input type="text" name="w" id="w">
+                    lbs
+                </div>
+            </div>
+
+            <div class="card how-active-are-you" style="width: 35rem;">
+                <h3 class="">How Active Are You?</h3>
+                <div class="custom-control custom-radio not-active">
+                    <input type="radio" class="custom-control-input" name="active" id="not-active">
+                    <label for="not-active" class="custom-control-label">Not Active</label>
+                </div>
+                <div class="custom-control custom-radio moderately-active">
+                    <input type="radio" class="custom-control-input" name="active" id="moderately-active">
+                    <label for="moderately-active" class="custom-control-label">Moderately Active</label>
+                </div>
+                <div class="custom-control custom-radio very-active">
+                    <input type="radio" class="custom-control-input" name="active" id="very-active">
+                    <label for="very-active" class="custom-control-label">Very Active</label>
+                </div>
+            </div>
+
+            <div class="card what-is-your-goal" style="width: 35rem;">
+                <h3 class="">What Is Your Goal?</h3>
+                <div class="custom-control custom-radio maintain-weight">
+                    <input type="radio" class="custom-control-input" name="goal" id="maintain-weight">
+                    <label for="maintain-weight" class="custom-control-label">Maintain Weight</label>
+                </div>
+                <div class="custom-control custom-radio lose-weight">
+                    <input type="radio" class="custom-control-input" name="goal" id="lose-weight">
+                    <label for="lose-weight" class="custom-control-label">Lose Weight</label>
+                </div>
+                <div class="custom-control custom-radio gain-weight">
+                    <input type="radio" class="custom-control-input" name="goal" id="gain-weight">
+                    <label for="gain-weight" class="custom-control-label">Gain Weight</label>
+                </div>
+            </div>
+
+            <div class="card are-you-following-a-specific-diet" style="width: 35rem;">
+                <h3 class="">Are You Following a Specific Diet</h3>
+                <div class="custom-control custom-checkbox maintain-weight">
+                    <input type="checkbox" class="custom-control-input" name="plant-based" id="plant-based">
+                    <label for="plant-based" class="custom-control-label">Plant Based</label>
+                </div>
+                <div class="custom-control custom-checkbox lose-weight">
+                    <input type="checkbox" class="custom-control-input" name="vegetarian" id="vegetarian">
+                    <label for="vegetarian" class="custom-control-label">Vegetarian</label>
+                </div>
+                <div class="custom-control custom-checkbox gain-weight">
+                    <input type="checkbox" class="custom-control-input" name="pescatarian" id="pescatarian">
+                    <label for="pescatarian" class="custom-control-label">Pescatarian</label>
+                </div>
+            </div>
+
+        </section>
+    </body>
+</html>
