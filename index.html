@@ -27,14 +27,14 @@
                 </div>
                 <div class="height">
                     <label for="height" class="">Height</label>
-                    <input type="text" name="height-feet" id="h">
+                    <input type="text" name="height-feet" id="height-feet">
                     ft
-                    <input type="text" name="height-inches" id="h">
+                    <input type="text" name="height-inches" id="height-inches">
                     in
                 </div>
                 <div class="weight">
                     <label for="weight" class="">Weight</label>
-                    <input type="text" name="w" id="w">
+                    <input type="text" name="weight" id="weight">
                     lbs
                 </div>
             </div>
@@ -74,8 +74,8 @@
             <div class="card are-you-following-a-specific-diet" style="width: 35rem;">
                 <h3 class="">Are You Following a Specific Diet</h3>
                 <div class="custom-control custom-checkbox maintain-weight">
-                    <input type="checkbox" class="custom-control-input" name="plant-based" id="plant-based">
-                    <label for="plant-based" class="custom-control-label">Plant Based</label>
+                    <input type="checkbox" class="custom-control-input" name="vegan" id="vegan">
+                    <label for="vegan" class="custom-control-label">Vegan</label>
                 </div>
                 <div class="custom-control custom-checkbox lose-weight">
                     <input type="checkbox" class="custom-control-input" name="vegetarian" id="vegetarian">
@@ -87,6 +87,9 @@
                 </div>
             </div>
 
+            <a type="button" class="btn btn-primary" id="submit">Get Recipes</a>
+
         </section>
+        <script src="app.js"></script>
     </body>
 </html>
