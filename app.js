@@ -1,6 +1,6 @@
-let gender, active, goal
+let gender, active, goal, recipes
 let diets = new Array();
-let api_call = 'https://api.edamam.com/search?q=chicken&app_id=$f49d55d1&app_key=$f4a318b1872a680a0893cdabff670d7d';
+let api_call = 'https://api.edamam.com/search?q=&app_id=f49d55d1&app_key=f4a318b1872a680a0893cdabff670d7d&health=alcohol-free';
 
 document.getElementById('submit').onclick = function() {
     let gender_options = document.getElementsByName('gender');
@@ -45,10 +45,27 @@ document.getElementById('submit').onclick = function() {
     for (let diet of diets) {
         api_call = api_call + '&health=' + diet;
     }
-    const response = fetch(api_call);
-    response
-        .then(data => data.json())
-        .then(data => {
-            console.log(data);
-        })
+
+    async function getData() {
+        const response = await fetch(api_call)
+        const data = response.json();
+        return data;
+    }
+    rec = document.querySelector('.recipes');
+    getData().then(data => {
+        for (let i=0; i<data.hits.length; i++) {
+            console.log(data.hits[i].recipe);
+            let card = document.createElement('div');
+            card.className = 'card'
+            card.style = 'width: 15rem;'
+            let title = document.createElement('h3');
+            title.innerHTML = data.hits[i].recipe.label;
+            let photo = document.createElement('img');
+            photo.src = data.hits[i].recipe.image;
+            
+            card.appendChild(title);
+            card.appendChild(photo);
+            rec.appendChild(card);
+        }
+    })
 }
