@@ -58,13 +58,31 @@ document.getElementById('submit').onclick = function() {
             let card = document.createElement('div');
             card.className = 'card'
             card.style = 'width: 15rem;'
+
+            let card_front = document.createElement('div');
+            card_front.className = 'card-front';
             let title = document.createElement('h3');
+            title.className = 'card-title';
             title.innerHTML = data.hits[i].recipe.label;
             let photo = document.createElement('img');
             photo.src = data.hits[i].recipe.image;
-            
-            card.appendChild(title);
-            card.appendChild(photo);
+
+            let card_back = document.createElement('div');
+            card_back.className = 'card-back';
+            let ingredients_title = document.createElement('h3');
+            ingredients_title.innerHTML = 'Ingredients';
+            card_back.appendChild(ingredients_title);
+            let ingredients = data.hits[i].recipe.ingredientLines;
+            for (let i=0; i<ingredients.length; i++) {
+                let ingredient = document.createElement('li');
+                ingredient.innerHTML = ingredients[i];
+                card_back.appendChild(ingredient);
+            }
+
+            card_front.appendChild(photo);
+            card_front.appendChild(title);
+            card.appendChild(card_front);
+            card.appendChild(card_back);
             rec.appendChild(card);
         }
     })

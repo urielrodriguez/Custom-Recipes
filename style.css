@@ -68,6 +68,7 @@ body {
 }
 
 .recipes {
+    margin-top: 15px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 1rem;
@@ -75,6 +76,30 @@ body {
 
 .recipes img {
     width: 100%;
-    height: 15vw;
-    object-fit: cover;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.card-title {
+    font-size: medium;
+    margin-top: 5px;
+}
+
+.recipes .card {
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.recipes .card:hover {
+    transform: rotateY(180deg);
+}
+
+.card-front {
+    backface-visibility: hidden;
+}
+
+.card-back {
+    position: absolute;
+    backface-visibility: hidden;
+    transform: rotateY(-180deg);
 }
