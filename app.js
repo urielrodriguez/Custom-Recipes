@@ -46,6 +46,11 @@ document.getElementById('submit').onclick = function() {
         api_call = api_call + '&health=' + diet;
     }
 
+    recipes_title = document.querySelector('.recipes-title');
+    let rt = document.createElement('h2');
+    rt.innerHTML = 'Recipes';
+    recipes_title.appendChild(rt);
+
     async function getData() {
         const response = await fetch(api_call)
         const data = response.json();

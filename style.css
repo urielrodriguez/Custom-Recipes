@@ -67,6 +67,10 @@ body {
     margin-top: 20px;
 }
 
+.recipes-title {
+    margin-top: 15px;
+}
+
 .recipes {
     margin-top: 15px;
     display: grid;
